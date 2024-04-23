@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
+// eslint-disable-next-line react/prop-types
 const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
     const { _id, name, quantity, supplier, taste, photo } = coffee || {};
 
@@ -27,6 +28,7 @@ const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
                             text: "Your coffee has been deleted.",
                             icon: "success"
                         });
+                        // eslint-disable-next-line react/prop-types
                         const remaining = coffees.filter(cof => cof._id !== _id)
                         setCoffees(remaining)
                     }
